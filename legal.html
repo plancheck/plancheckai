@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Legal — plancheck.ai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #7FBA00;
+  --bg: #06080C;
+  --bg2: #0A0D14;
+  --bg3: #0E1219;
+  --border: #161C28;
+  --border2: #1E2736;
+  --text: #E8EDF5;
+  --text2: #8A95A8;
+  --text3: #3D4A5C;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 40px; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(6,8,12,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-mark {
+  width: 34px; height: 34px; background: var(--green); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 500; color: #000;
+}
+.nav-logo-text { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800; color: var(--text); }
+.nav-logo-text span { color: var(--green); }
+.page-wrap { max-width: 780px; margin: 0 auto; padding: 100px 40px 80px; }
+.tabs {
+  display: flex; gap: 4px; background: var(--bg2);
+  border: 1px solid var(--border2); border-radius: 10px;
+  padding: 4px; margin-bottom: 48px; width: fit-content;
+}
+.tab {
+  padding: 10px 24px; border-radius: 7px; font-size: 14px; font-weight: 600;
+  cursor: pointer; border: none; background: transparent; color: var(--text2);
+  transition: all 0.2s; font-family: 'Outfit', sans-serif;
+}
+.tab.active { background: var(--green); color: #000; }
+.doc { display: none; }
+.doc.active { display: block; }
+.doc-label {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--green);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.doc-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--green); }
+.doc-title { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
+.doc-meta { font-size: 13px; color: var(--text3); font-family: 'IBM Plex Mono', monospace; margin-bottom: 40px; }
+.alert-box {
+  background: rgba(127,186,0,0.06); border: 1px solid rgba(127,186,0,0.2);
+  border-left: 3px solid var(--green); border-radius: 8px; padding: 16px 20px;
+  margin-bottom: 36px; font-size: 14px; color: var(--text2); line-height: 1.7;
+}
+.alert-box strong { color: var(--green); }
+h2 {
+  font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700;
+  margin: 40px 0 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--border); color: var(--text);
+}
+h3 { font-size: 16px; font-weight: 600; margin: 24px 0 10px; color: var(--text); }
+p { font-size: 15px; color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+ul, ol { margin: 0 0 16px 20px; }
+li { font-size: 15px; color: var(--text2); line-height: 1.8; margin-bottom: 6px; }
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--text); font-weight: 600; }
+footer { border-top: 1px solid var(--border); padding: 30px 40px; margin-top: 60px; text-align: center; }
+.footer-copy { font-size: 12px; color: var(--text3); }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">P</div>
+    <div class="nav-logo-text">plancheck<span>.ai</span></div>
+  </a>
+  <a href="/" style="color:var(--text2);font-size:14px;text-decoration:none;">← Back to plancheck.ai</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="tabs">
+    <button class="tab active" onclick="showDoc('tos', this)">Terms of Service</button>
+    <button class="tab" onclick="showDoc('privacy', this)">Privacy Policy</button>
+  </div>
+
+  <!-- TERMS OF SERVICE -->
+  <div class="doc active" id="tos">
+    <div class="doc-label">Legal</div>
+    <div class="doc-title">Terms of Service</div>
+    <div class="doc-meta">Effective Date: January 1, 2025 · SDO Enterprises LLC</div>
+    <div class="alert-box">
+      <strong>⚠️ Important:</strong> plancheck.ai is an AI-assisted tool designed to support — not replace — licensed professionals. All findings must be independently verified by a qualified professional before any permit decision or regulatory determination is made.
+    </div>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using plancheck.ai (the "Service"), operated by SDO Enterprises LLC ("Company," "we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree, do not use the Service.</p>
+    <h2>2. Description of Service</h2>
+    <p>plancheck.ai is an AI-powered platform that analyzes construction plan documents and generates compliance reports cross-referencing IBC 2021, IFC 2021, ADA Standards, NFPA 101, NFPA 13, and NFPA 72. The Service assists qualified professionals and does not constitute a complete, final, or legally binding plan review.</p>
+    <h2>3. AI Limitations and Disclaimer</h2>
+    <p><strong>THE SERVICE IS NOT A SUBSTITUTE FOR PROFESSIONAL JUDGMENT.</strong> AI analysis may not identify all compliance issues, may generate inaccurate findings, does not account for local code amendments, and cannot replace a licensed professional. All findings are preliminary and must be independently verified before any action is taken.</p>
+    <h2>4. Limitation of Liability</h2>
+    <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SDO ENTERPRISES LLC SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM:</strong> reliance on Service outputs, permit decisions based on AI findings, errors or omissions in analysis, failure to identify code violations, or any building failures or safety incidents resulting from use of the Service. Total liability shall not exceed amounts paid in the preceding 12 months.</p>
+    <h2>5. User Responsibilities</h2>
+    <p>By using the Service, you agree that you are a qualified professional or acting under qualified supervision, will independently verify all findings, will not use the Service as sole basis for permit approval or denial, and are responsible for compliance with all applicable codes and regulations.</p>
+    <h2>6. Intellectual Property</h2>
+    <p>The Service and all content is owned by SDO Enterprises LLC. You retain ownership of uploaded documents and grant us a limited license to process them solely to provide the Service.</p>
+    <h2>7. Prohibited Uses</h2>
+    <p>You may not use the Service to violate any law, upload malicious content, reverse engineer our AI models, misrepresent AI findings as official plan review determinations, or expose SDO Enterprises LLC to liability.</p>
+    <h2>8. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless SDO Enterprises LLC from claims arising out of your use of the Service, violation of these Terms, or reliance on any Service outputs.</p>
+    <h2>9. Governing Law</h2>
+    <p>These Terms are governed by California law. Disputes shall be subject to the exclusive jurisdiction of courts in Contra Costa County, California.</p>
+    <h2>10. Contact</h2>
+    <p><strong>SDO Enterprises LLC</strong><br/>3756 Daniel Drive, Oakley, CA 94561<br/>Email: <a href="mailto:dustin@plancheck.ai">dustin@plancheck.ai</a></p>
+  </div>
+
+  <!-- PRIVACY POLICY -->
+  <div class="doc" id="privacy">
+    <div class="doc-label">Legal</div>
+    <div class="doc-title">Privacy Policy</div>
+    <div class="doc-meta">Effective Date: January 1, 2025 · SDO Enterprises LLC</div>
+    <div class="alert-box">
+      <strong>Our commitment:</strong> We collect only what we need, we never sell your data, and we are transparent about everything we do with your information.
+    </div>
+    <h2>1. Who We Are</h2>
+    <p>plancheck.ai is operated by SDO Enterprises LLC, 3756 Daniel Drive, Oakley, CA 94561. Contact us at <a href="mailto:dustin@plancheck.ai">dustin@plancheck.ai</a>.</p>
+    <h2>2. Information We Collect</h2>
+    <h3>Information You Provide</h3>
+    <ul>
+      <li>Name, email, organization, job role via waitlist/access request form</li>
+      <li>Construction plan documents uploaded for analysis</li>
+      <li>Communications and feedback you send us</li>
+    </ul>
+    <h3>Automatically Collected</h3>
+    <ul>
+      <li>Usage data, browser type, IP address, pages visited</li>
+      <li>Essential cookies required to operate the Service</li>
+    </ul>
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>Provide and improve the plancheck.ai Service</li>
+      <li>Process construction plan documents for compliance analysis</li>
+      <li>Contact you about access requests and onboarding</li>
+      <li>Send product updates (opt-out anytime)</li>
+      <li>Improve our AI models and analysis capabilities</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <h2>4. Plan Documents</h2>
+    <p>Uploaded documents are processed securely via HTTPS/TLS, are not permanently stored beyond what's necessary to provide the Service, and are never shared with third parties except as required to operate the Service. Do not upload classified or sensitive government information.</p>
+    <h2>5. How We Share Your Information</h2>
+    <p><strong>We never sell your personal information.</strong> We share only with service providers under confidentiality agreements (AI processing, hosting), when required by law, or in connection with a business transfer with notice to users.</p>
+    <h2>6. Third-Party Services</h2>
+    <ul>
+      <li><strong>Anthropic (Claude AI):</strong> Powers AI analysis — subject to Anthropic's privacy policy</li>
+      <li><strong>Vercel:</strong> Hosts the platform — subject to Vercel's privacy policy</li>
+    </ul>
+    <h2>7. Your Rights</h2>
+    <p>You have the right to access, correct, delete, or export your personal information. California residents have additional rights under CCPA including the right to know, delete, and opt-out of sale (we do not sell data). Contact <a href="mailto:dustin@plancheck.ai">dustin@plancheck.ai</a> to exercise any rights.</p>
+    <h2>8. Security</h2>
+    <p>We use HTTPS/TLS encryption, secure cloud infrastructure, and access controls. No method of internet transmission is 100% secure but we are committed to protecting your information.</p>
+    <h2>9. Changes</h2>
+    <p>We may update this Policy and will notify you of material changes by posting the new Policy with an updated effective date.</p>
+    <h2>10. Contact</h2>
+    <p><strong>SDO Enterprises LLC</strong><br/>3756 Daniel Drive, Oakley, CA 94561<br/>Email: <a href="mailto:dustin@plancheck.ai">dustin@plancheck.ai</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2025 SDO Enterprises LLC · plancheck.ai · <a href="/">Back to Home</a></div>
+</footer>
+
+<script>
+function showDoc(id, btn) {
+  document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
